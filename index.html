@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Tubagus Raka - FullStack Web Developer</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS v3 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#1E3A8A',
+                            light: '#2563EB',
+                            dark: '#0F172A',
+                            accent: '#38BDF8',
+                        },
+                        dark: {
+                            800: '#1E293B',
+                            900: '#0F172A',
+                        }
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="font-poppins text-slate-800 bg-white antialiased selection:bg-blue-600 selection:text-white">
+    <!-- Navbar -->
+    <nav class="navbar backdrop-blur-md bg-white/95 border-b border-slate-100 sticky top-0 z-50 transition-all duration-300 shadow-sm">
+        <div class="nav-container max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="logo text-2xl font-extrabold text-blue-900 tracking-tight hover:scale-105 transition-transform">
+                # <span class="text-blue-600">Tubagus</span> Raka
+            </a>
+            <ul class="nav-menu flex gap-7 text-sm font-semibold text-slate-600">
+                <li><a href="#home" class="hover:text-blue-600 transition-colors">Home</a></li>
+                <li><a href="#about" class="hover:text-blue-600 transition-colors">About</a></li>
+                <li><a href="#qualification" class="hover:text-blue-600 transition-colors">Record</a></li>
+                <li><a href="#skill" class="hover:text-blue-600 transition-colors">Skill</a></li>
+                <li><a href="#service" class="hover:text-blue-600 transition-colors">Service</a></li>
+                <li><a href="#certification" class="hover:text-blue-600 transition-colors">Certification</a></li>
+                <li><a href="#project" class="hover:text-blue-600 transition-colors">Project</a></li>
+                <li><a href="#activity" class="hover:text-blue-600 transition-colors">Activity</a></li>
+            </ul>
+            <div class="flex items-center gap-3">
+                <a href="https://www.linkedin.com/in/tubagusraka/" target="_blank"
+                    class="hire-btn inline-flex items-center gap-2 bg-blue-900 hover:bg-blue-700 text-white font-medium text-sm px-5 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-blue-500/25 active:scale-95">
+                    <span>LinkedIn</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+                </a>
+                <button id="mobile-toggle" class="p-2 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none transition-colors" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="mobile-menu-dropdown px-6 pb-6 pt-2 bg-white/95 backdrop-blur-md border-t border-slate-100 transition-all duration-300">
+            <ul class="flex flex-col gap-3 text-sm font-semibold text-slate-700">
+                <li><a href="#home" class="block py-1.5 hover:text-blue-600 transition-colors mobile-nav-link">Home</a></li>
+                <li><a href="#about" class="block py-1.5 hover:text-blue-600 transition-colors mobile-nav-link">About</a></li>
+                <li><a href="#qualification" class="block py-1.5 hover:text-blue-600 transition-colors mobile-nav-link">Record</a></li>
+                <li><a href="#skill" class="block py-1.5 hover:text-blue-600 transition-colors mobile-nav-link">Skill</a></li>
+                <li><a href="#service" class="block py-1.5 hover:text-blue-600 transition-colors mobile-nav-link">Service</a></li>
+                <li><a href="#certification" class="block py-1.5 hover:text-blue-600 transition-colors mobile-nav-link">Certification</a></li>
+                <li><a href="#project" class="block py-1.5 hover:text-blue-600 transition-colors mobile-nav-link">Project</a></li>
+                <li><a href="#activity" class="block py-1.5 hover:text-blue-600 transition-colors mobile-nav-link">Activity</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="home-section relative overflow-hidden" id="home">
+        <div class="home-container max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="home-content z-10">
+                <h3 class="text-xl font-medium text-slate-500">I'm</h3>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-3">
+                    Tubagus <span class="text-blue-800">Raka</span>
+                </h1>
+                <p class="roles text-xl sm:text-2xl font-semibold text-blue-600 mb-6 flex items-center gap-2">
+                    <span id="typing-text" class="border-b-2 border-blue-600 pb-0.5">Web Developer</span>
+                </p>
+                <div class="home-buttons flex items-center gap-4 flex-wrap">
+                    <a href="https://drive.google.com/file/d/1uOSIG8bXdtZZTNSt35teKONJGtjGpNzE/view?usp=sharing"
+                        class="cv-btn inline-flex items-center gap-2.5 bg-blue-900 hover:bg-blue-800 text-white font-semibold px-7 py-3 rounded-full transition-all duration-300 shadow-lg shadow-blue-900/20 hover:-translate-y-0.5 active:scale-95" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>Download CV</span>
+                    </a>
+                    <div class="social-links flex items-center gap-3">
+                        <a href="https://www.linkedin.com/in/tubagusraka/" target="_blank"
+                            class="p-2.5 rounded-full bg-slate-100 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 transition-all duration-300 hover:scale-110 shadow-sm" title="LinkedIn">
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="w-5 h-5">
+                        </a>
+                        <a href="https://github.com/zhubalabala23?tab=repositories" target="_blank"
+                            class="p-2.5 rounded-full bg-slate-100 hover:bg-slate-200 border border-slate-200 transition-all duration-300 hover:scale-110 shadow-sm" title="GitHub">
+                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="w-5 h-5">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="home-image relative flex justify-center items-center">
+                <div class="hero-glow-ring"></div>
+                <img src="images/profile.jpg" alt="Tubagus Raka Satria Putra"
+                    class="w-64 h-64 sm:w-80 sm:h-80 object-cover rounded-full border-4 border-white shadow-2xl relative z-10 transition-transform duration-500 hover:scale-105">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-slate-50/60 reveal">
+        <div class="section-title text-center mb-16">
+            <span class="text-blue-600 font-bold text-xs uppercase tracking-widest px-3 py-1 bg-blue-100/70 rounded-full inline-block mb-3">About Me</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Know More <span class="text-blue-800">About Me</span></h2>
+        </div>
+        <div class="container max-w-6xl mx-auto px-6">
+            <div class="about-container grid grid-cols-1 md:grid-cols-12 gap-12 items-center bg-white p-8 sm:p-12 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100">
+                <div class="about-image md:col-span-5 flex justify-center">
+                    <div class="relative group">
+                        <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur-lg opacity-30 group-hover:opacity-60 transition duration-500"></div>
+                        <img src="images/profile2.jpeg" alt="Tubagus Raka"
+                            class="relative rounded-2xl w-full max-w-xs object-cover shadow-lg transition-transform duration-500 group-hover:scale-[1.02]">
+                    </div>
+                </div>
+                <div class="about-content md:col-span-7">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-blue-50 text-blue-800 text-xs font-semibold mb-3">
+                        Full-Stack Engineer & System Analyst
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 leading-snug">
+                        Building functional, user-centric, and scalable digital solutions.
+                    </h3>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 text-justify">
+                        Passionate about Web Development, Mobile Development, System Analysis, and UI/UX Design, I am
+                        always eager to learn, explore IT projects, and share knowledge. I am currently pursuing a
+                        bachelor's degree (S1) in
+                        Informatics Engineering at Trilogi University, focusing on Intelligent Systems and maintaining a
+                        GPA of 3.82/4.00.
+                        I have hands-on experience through technical internships at DJKN and BPJS Ketenagakerjaan, where
+                        I have actively
+                        worked on digital solutions using Web Frameworks, Android Studio, and Figma for the past year.
+                    </p>
+                    <div class="info-grid grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="info-item p-3.5 rounded-xl bg-slate-50 border border-slate-100 hover:border-blue-200 transition-colors">
+                            <h6 class="text-xs font-semibold uppercase text-slate-400 mb-1">Name</h6>
+                            <p class="text-sm font-bold text-slate-800">Tubagus Raka Satria Putra</p>
+                        </div>
+                        <div class="info-item p-3.5 rounded-xl bg-slate-50 border border-slate-100 hover:border-blue-200 transition-colors">
+                            <h6 class="text-xs font-semibold uppercase text-slate-400 mb-1">Degree</h6>
+                            <p class="text-sm font-bold text-slate-800">Bachelor of Computer Science (S.Kom)</p>
+                        </div>
+                        <div class="info-item p-3.5 rounded-xl bg-slate-50 border border-slate-100 hover:border-blue-200 transition-colors">
+                            <h6 class="text-xs font-semibold uppercase text-slate-400 mb-1">Email</h6>
+                            <p class="text-sm font-bold text-blue-700 break-all">raka230803@gmail.com</p>
+                        </div>
+                        <div class="info-item p-3.5 rounded-xl bg-slate-50 border border-slate-100 hover:border-blue-200 transition-colors">
+                            <h6 class="text-xs font-semibold uppercase text-slate-400 mb-1">Phone / WA</h6>
+                            <p class="text-sm font-bold text-slate-800">085695522866</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 flex-wrap">
+                        <a href="https://wa.me/6285695522866" target="_blank"
+                            class="cv-btn inline-flex items-center gap-2 bg-blue-900 hover:bg-blue-800 text-white font-semibold text-sm px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-blue-900/25 active:scale-95">
+                            <span>💬 Hire Me / WhatsApp</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/tubagusraka/" target="_blank"
+                            class="inline-flex items-center gap-2 bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-blue-700 font-semibold text-sm px-6 py-3 rounded-full border border-slate-200 transition-all duration-300 hover:scale-102">
+                            <span>View LinkedIn Profile</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Record Section -->
+    <section id="qualification" class="py-24 bg-slate-50/80 reveal">
+        <div class="section-title text-center mb-16">
+            <span class="text-blue-600 font-bold text-xs uppercase tracking-widest px-3 py-1 bg-blue-100/70 rounded-full inline-block mb-3">Career & Academic Record</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Professional <span class="text-blue-800">Record</span></h2>
+        </div>
+        <div class="container max-w-6xl mx-auto px-6">
+            <div class="record-grid" style="display: flex; gap: 50px; flex-wrap: wrap;">
+
+                <!-- Column 1: Work Experience -->
+                <div class="record-column" style="flex: 1; min-width: 320px;">
+                    <h3 style="margin-bottom: 30px; font-size: 1.8rem; color: var(--text-darker); display: flex; align-items: center; gap: 10px;">
+                        <span>💼</span> Work Experience
+                    </h3>
+                    <div class="timeline" style="border-left: 2px solid #e2e8f0; padding-left: 30px; position: relative;">
+
+                        <!-- SISMOKAP -->
+                        <div class="timeline-item" style="position: relative; margin-bottom: 40px;">
+                            <div class="dot" style="position: absolute; left: -41px; top: 5px; width: 20px; height: 20px; background: white; border: 3px solid var(--primary-color); border-radius: 50%;"></div>
+                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 5px;">
+                                <h4 style="font-size: 1.2rem; color: var(--primary-color); margin: 0;">FullStack Web Developer</h4>
+                                <span style="background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; font-size: 0.75rem; font-weight: 600; padding: 2px 10px; border-radius: 12px;">Laravel 11 • Supabase</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                                <div style="width: 38px; height: 38px; background: #1e3a8a; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.85rem;">SMK</div>
+                                <div>
+                                    <span style="font-weight: 600; display: block; color: var(--text-darker);">SISMOKAP – Monitoring Progress Konstruksi</span>
+                                    <small style="color: #64748b;">Client: Denzibang 3/V Madiun (Institutional / Military)</small>
+                                </div>
+                            </div>
+                            <small style="color: #888; display: block; margin-bottom: 10px; font-weight: 500;">📅 Jul 2026 - Present | Jakarta, Indonesia</small>
+                            <ul style="font-size: 0.9rem; color: #555; padding-left: 18px; line-height: 1.6;">
+                                <li>Membangun aplikasi web pemantauan progres konstruksi di berbagai lokasi proyek klien militer/institusional (Denzibang 3/V Madiun).</li>
+                                <li>Mengimplementasikan autentikasi multi-peran (Admin, Operator, Pimpinan), dashboard interaktif visual dengan grafik, dokumentasi foto, dan perhitungan otomatis persentase progres.</li>
+                                <li>Mengembangkan modul ekspor otomatis laporan PDF/Excel dan melakukan deployment sistem di Vercel menggunakan Laravel 11 dengan Supabase (PostgreSQL) dan Supabase Storage.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Paldam Jaya -->
+                        <div class="timeline-item" style="position: relative; margin-bottom: 40px;">
+                            <div class="dot" style="position: absolute; left: -41px; top: 5px; width: 20px; height: 20px; background: white; border: 3px solid var(--primary-color); border-radius: 50%;"></div>
+                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 5px;">
+                                <h4 style="font-size: 1.2rem; color: var(--primary-color); margin: 0;">Web Developer</h4>
+                                <span style="background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; font-size: 0.75rem; font-weight: 600; padding: 2px 10px; border-radius: 12px;">Laravel • React JS • Tailwind</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                                <div style="width: 38px; height: 38px; background: #059669; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.85rem;">PDJ</div>
+                                <div>
+                                    <span style="font-weight: 600; display: block; color: var(--text-darker);">Paldam Jaya – Sistem Data Materiil Senjata</span>
+                                    <small style="color: #64748b;">Military Weapons & Inventory Platform</small>
+                                </div>
+                            </div>
+                            <small style="color: #888; display: block; margin-bottom: 10px; font-weight: 500;">📅 Jun 2026 - Present | Jakarta, Indonesia</small>
+                            <ul style="font-size: 0.9rem; color: #555; padding-left: 18px; line-height: 1.6;">
+                                <li>Membangun platform manajemen inventaris berbasis web untuk materiil persenjataan militer dengan autentikasi berbasis per-kesatuan (unit).</li>
+                                <li>Mengembangkan fitur input data persenjataan, rekap otomatis jumlah berdasarkan tipe senjata, dan pelacakan kondisi fisik (Rusak Ringan/Berat).</li>
+                                <li>Mengimplementasikan fitur cetak dan pembuatan laporan otomatis format standar A4.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Kumdam XVII Cendrawasih -->
+                        <div class="timeline-item" style="position: relative; margin-bottom: 40px;">
+                            <div class="dot" style="position: absolute; left: -41px; top: 5px; width: 20px; height: 20px; background: white; border: 3px solid var(--primary-color); border-radius: 50%;"></div>
+                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 5px;">
+                                <h4 style="font-size: 1.2rem; color: var(--primary-color); margin: 0;">FullStack Web Developer</h4>
+                                <span style="background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; font-size: 0.75rem; font-weight: 600; padding: 2px 10px; border-radius: 12px;">React JS • Vite • Firebase</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                                <div style="width: 38px; height: 38px; background: #7c3aed; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.85rem;">KMD</div>
+                                <div>
+                                    <span style="font-weight: 600; display: block; color: var(--text-darker);">Kumdam XVII Cendrawasih – Sistem Data Perkara</span>
+                                    <small style="color: #64748b;">Case-Tracking & Legal Record System</small>
+                                </div>
+                            </div>
+                            <small style="color: #888; display: block; margin-bottom: 10px; font-weight: 500;">📅 Jun 2026 – Aug 2026 | Jakarta, Indonesia</small>
+                            <ul style="font-size: 0.9rem; color: #555; padding-left: 18px; line-height: 1.6;">
+                                <li>Mengembangkan aplikasi web untuk mengelola data perkara hukum personel dan satuan menggunakan React JS, Vite, dan Firebase.</li>
+                                <li>Membangun fitur rekap data perkara dan formulir input terstruktur untuk pencatatan kasus hukum militer.</li>
+                                <li>Mengimplementasikan visualisasi data terintegrasi guna mendukung pemantauan dan pelaporan kasus secara real-time.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Maria Salon -->
+                        <div class="timeline-item" style="position: relative; margin-bottom: 40px;">
+                            <div class="dot" style="position: absolute; left: -41px; top: 5px; width: 20px; height: 20px; background: white; border: 3px solid var(--primary-color); border-radius: 50%;"></div>
+                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 5px;">
+                                <h4 style="font-size: 1.2rem; color: var(--primary-color); margin: 0;">Front-End Developer</h4>
+                                <span style="background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; font-size: 0.75rem; font-weight: 600; padding: 2px 10px; border-radius: 12px;">React • Tailwind • Xendit</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                                <div style="width: 38px; height: 38px; background: #db2777; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.85rem;">MS</div>
+                                <div>
+                                    <span style="font-weight: 600; display: block; color: var(--text-darker);">Maria Salon – Landing Page & Booking</span>
+                                    <small style="color: #64748b;">Premium Salon Sunter, North Jakarta</small>
+                                </div>
+                            </div>
+                            <small style="color: #888; display: block; margin-bottom: 10px; font-weight: 500;">📅 Apr 2026 – Aug 2026 | Jakarta, Indonesia</small>
+                            <ul style="font-size: 0.9rem; color: #555; padding-left: 18px; line-height: 1.6;">
+                                <li>Membangun website landing page untuk Salon Maria, salon kecantikan premium di Sunter Jakarta Utara, menggunakan React dan Tailwind CSS.</li>
+                                <li>Merancang UI yang elegan, fully responsive di berbagai perangkat, dengan performa loading cepat.</li>
+                                <li>Mengintegrasikan payment gateway Xendit untuk pembayaran booking online secara aman serta peta interaktif Google Maps.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Wahana Express -->
+                        <div class="timeline-item" style="position: relative; margin-bottom: 40px;">
+                            <div class="dot" style="position: absolute; left: -41px; top: 5px; width: 20px; height: 20px; background: white; border: 3px solid var(--primary-color); border-radius: 50%;"></div>
+                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 5px;">
+                                <h4 style="font-size: 1.2rem; color: var(--primary-color); margin: 0;">IT Support</h4>
+                                <span style="background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; font-size: 0.75rem; font-weight: 600; padding: 2px 10px; border-radius: 12px;">Infrastructure • Hardware</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                                <div style="width: 38px; height: 38px; background: #2563eb; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.85rem;">WPL</div>
+                                <div>
+                                    <span style="font-weight: 600; display: block; color: var(--text-darker);">Wahana Express</span>
+                                    <small style="color: #64748b;">PT Wahana Prestasi Logistik</small>
+                                </div>
+                            </div>
+                            <small style="color: #888; display: block; margin-bottom: 10px; font-weight: 500;">📅 December 2021 - March 2022 | Jakarta, Indonesia</small>
+                            <ul style="font-size: 0.9rem; color: #555; padding-left: 18px; line-height: 1.6;">
+                                <li>Memberikan dukungan teknis Level-1 troubleshooting hardware, software, dan jaringan lokal operasional logistik.</li>
+                                <li>Melakukan konfigurasi dan pemeliharaan PC kantor, thermal printer, barcode scanner, dan sistem jaringan.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Column 2: Education & Internship -->
+                <div class="record-column" style="flex: 1; min-width: 320px;">
+                    <h3 style="margin-bottom: 30px; font-size: 1.8rem; color: var(--text-darker); display: flex; align-items: center; gap: 10px;">
+                        <span>🎓</span> Education & Internship
+                    </h3>
+                    <div class="timeline" style="border-left: 2px solid #e2e8f0; padding-left: 30px; position: relative;">
+
+                        <!-- Trilogi Education -->
+                        <div class="timeline-item" style="position: relative; margin-bottom: 40px;">
+                            <div class="dot" style="position: absolute; left: -41px; top: 5px; width: 20px; height: 20px; background: white; border: 3px solid var(--primary-color); border-radius: 50%;"></div>
+                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 5px;">
+                                <h4 style="font-size: 1.2rem; color: var(--primary-color); margin: 0;">Bachelor of Informatics Engineering</h4>
+                                <span style="background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; font-size: 0.75rem; font-weight: 700; padding: 2px 10px; border-radius: 12px;">GPA 3.82 / 4.00</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                                <a href="https://trilogi.ac.id/" target="_blank">
+                                    <img src="images/trilogi.png" alt="Trilogi University Logo" style="width: 42px; height: 42px; object-fit: contain; border-radius: 4px;">
+                                </a>
+                                <div>
+                                    <span style="font-weight: 600; display: block; color: var(--text-darker);">Universitas Trilogi</span>
+                                    <small style="color: #64748b;">South Jakarta, Indonesia</small>
+                                </div>
+                            </div>
+                            <small style="color: #888; display: block; margin-bottom: 10px; font-weight: 500;">📅 October 2022 - August 2026</small>
+                            <p style="font-size: 0.95rem; color: #555; text-align: justify; line-height: 1.6;">
+                                Menempuh pendidikan S1 Teknik Informatika dengan IPK 3.82/4.00. Berfokus pada Full-Stack Web Development (Laravel, React, Vite), arsitektur sistem informasi cerdas, rekayasa perangkat lunak, dan UI/UX design.
+                            </p>
+                        </div>
+
+                        <!-- BPJS Insanova -->
+                        <div class="timeline-item" style="position: relative; margin-bottom: 40px;">
+                            <div class="dot" style="position: absolute; left: -41px; top: 5px; width: 20px; height: 20px; background: white; border: 3px solid var(--primary-color); border-radius: 50%;"></div>
+                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 5px;">
+                                <h4 style="font-size: 1.2rem; color: var(--primary-color); margin: 0;">Strategic Planner & Web Developer</h4>
+                                <span style="background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; font-size: 0.75rem; font-weight: 600; padding: 2px 10px; border-radius: 12px;">Laravel • Figma • QC</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                                <a href="https://www.bpjsketenagakerjaan.go.id/" target="_blank" style="text-decoration: none;">
+                                    <img src="images/bpjstk.png" alt="BPJS Ketenagakerjaan" style="width: 38px; height: 38px; object-fit: contain; border-radius: 4px;">
+                                </a>
+                                <div>
+                                    <span style="font-weight: 600; display: block; color: var(--text-darker);">BPJS Ketenagakerjaan – Insanova Platform</span>
+                                    <small style="color: #64748b;">Idea & Innovation Management System</small>
+                                </div>
+                            </div>
+                            <small style="color: #888; display: block; margin-bottom: 10px; font-weight: 500;">📅 Oct 2025 - Jan 2026 | Jakarta Selatan</small>
+                            <ul style="font-size: 0.9rem; color: #555; padding-left: 18px; line-height: 1.6;">
+                                <li>Merancang antarmuka platform Insanova (Idea & Innovation Management) di Figma dan mengimplementasikan fitur web menggunakan framework Laravel.</li>
+                                <li>Membangun dashboard sistem informasi manajemen mutu (PSM) serta melakukan pemetaan proses bisnis Level 1-3 menggunakan standar Draw.io.</li>
+                                <li>Melakukan analisis Quality Control (QC) dan Customer Satisfaction Index (CSI) pada 26 unit BPJAMSOSTEK.</li>
+                            </ul>
+                        </div>
+
+                        <!-- DJKN -->
+                        <div class="timeline-item" style="position: relative; margin-bottom: 40px;">
+                            <div class="dot" style="position: absolute; left: -41px; top: 5px; width: 20px; height: 20px; background: white; border: 3px solid var(--primary-color); border-radius: 50%;"></div>
+                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 5px;">
+                                <h4 style="font-size: 1.2rem; color: var(--primary-color); margin: 0;">Junior System Analyst</h4>
+                                <span style="background: #f8fafc; color: #475569; border: 1px solid #cbd5e1; font-size: 0.75rem; font-weight: 600; padding: 2px 10px; border-radius: 12px;">Agile • IPO • Chatbot</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                                <a href="https://lelang.go.id/" target="_blank" style="text-decoration: none;">
+                                    <img src="images/djkn.jpg" alt="DJKN" style="width: 42px; height: 42px; object-fit: contain; border-radius: 4px;">
+                                </a>
+                                <div>
+                                    <span style="font-weight: 600; display: block; color: var(--text-darker);">Direktorat Jenderal Kekayaan Negara</span>
+                                    <small style="color: #64748b;">Kementerian Keuangan RI</small>
+                                </div>
+                            </div>
+                            <small style="color: #888; display: block; margin-bottom: 10px; font-weight: 500;">📅 July 2024 - January 2025 | Jakarta, Indonesia</small>
+                            <ul style="font-size: 0.9rem; color: #555; padding-left: 18px; line-height: 1.6;">
+                                <li>Memetakan alur Input, Process, dan Output (IPO) untuk modul DJKN, SIMAN, dan perpajakan serta mengelompokkan 29 User Stories.</li>
+                                <li>Menganalisis kebutuhan sistem fitur Chatbot/Live Chat, notifikasi pengembalian UJPL, dan pengaturan notifikasi via WhatsApp/email.</li>
+                                <li>Menyusun dokumentasi teknis dan FAQ lelang.go.id untuk kemudahan pengguna publik.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Assistant Lecturer -->
+                        <div class="timeline-item" style="position: relative; margin-bottom: 40px;">
+                            <div class="dot" style="position: absolute; left: -41px; top: 5px; width: 20px; height: 20px; background: white; border: 3px solid var(--primary-color); border-radius: 50%;"></div>
+                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 5px;">
+                                <h4 style="font-size: 1.2rem; color: var(--primary-color); margin: 0;">Assistant Lecturer</h4>
+                                <span style="background: #f8fafc; color: #475569; border: 1px solid #cbd5e1; font-size: 0.75rem; font-weight: 600; padding: 2px 10px; border-radius: 12px;">Networking Lab</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                                <a href="https://www.trilogi.ac.id/" target="_blank" style="text-decoration: none;">
+                                    <img src="images/trilogi.png" alt="Trilogi University" style="width: 42px; height: 42px; object-fit: contain; border-radius: 4px;">
+                                </a>
+                                <div>
+                                    <span style="font-weight: 600; display: block; color: var(--text-darker);">Universitas Trilogi</span>
+                                    <small style="color: #64748b;">Computer Network Systems Practicum</small>
+                                </div>
+                            </div>
+                            <small style="color: #888; display: block; margin-bottom: 10px; font-weight: 500;">📅 September 2025 - January 2026</small>
+                            <ul style="font-size: 0.9rem; color: #555; padding-left: 18px; line-height: 1.6;">
+                                <li>Mendampingi dosen dalam penyampaian materi praktikum Sistem Jaringan Komputer untuk 42+ mahasiswa dalam 16 pertemuan.</li>
+                                <li>Membimbing kelompok mahasiswa dalam pengerjaan modul praktikum, tugas mingguan, dan evaluasi hasil belajar semester.</li>
+                            </ul>
+                        </div>
+
+                        <!-- SMK YP IPPI -->
+                        <div class="timeline-item" style="position: relative; margin-bottom: 40px;">
+                            <div class="dot" style="position: absolute; left: -41px; top: 5px; width: 20px; height: 20px; background: white; border: 3px solid var(--primary-color); border-radius: 50%;"></div>
+                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 5px;">
+                                <h4 style="font-size: 1.2rem; color: var(--primary-color); margin: 0;">Computer Network Engineering</h4>
+                                <span style="background: #f8fafc; color: #475569; border: 1px solid #cbd5e1; font-size: 0.75rem; font-weight: 600; padding: 2px 10px; border-radius: 12px;">Fiber Optic • BNSP</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                                <a href="https://ypippijkt.sch.id/" target="_blank">
+                                    <img src="images/smk.png" alt="SMK YP IPPI Logo" style="width: 42px; height: 42px; object-fit: contain; border-radius: 4px;">
+                                </a>
+                                <div>
+                                    <span style="font-weight: 600; display: block; color: var(--text-darker);">SMK YP IPPI</span>
+                                    <small style="color: #64748b;">Teknik Komputer dan Jaringan</small>
+                                </div>
+                            </div>
+                            <small style="color: #888; display: block; margin-bottom: 10px; font-weight: 500;">📅 2018 - 2021</small>
+                            <p style="font-size: 0.95rem; color: #555; text-align: justify; line-height: 1.6;">
+                                Pelatihan instalasi fiber optic di Telkom dan brand ambassador fiber optic. Memperoleh sertifikasi kompetensi BNSP Computer Network.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skill" class="py-24 bg-white reveal">
+        <div class="section-title text-center mb-16">
+            <span class="text-blue-600 font-bold text-xs uppercase tracking-widest px-3 py-1 bg-blue-100/70 rounded-full inline-block mb-3">Technical Proficiency</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">My <span class="text-blue-800">Skills</span></h2>
+        </div>
+        <div class="container max-w-5xl mx-auto px-6">
+            <div class="skills-grid grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- HTML & CSS -->
+                <div class="skill-item bg-slate-50/70 p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-slate-800 text-sm flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-blue-600"></span> HTML5 & CSS3 / Tailwind CSS
+                        </span>
+                        <span class="font-bold text-blue-700 text-xs px-2.5 py-0.5 bg-blue-100/70 rounded-full">95%</span>
+                    </div>
+                    <div class="progress-bar w-full bg-slate-200/80 h-2.5 rounded-full overflow-hidden">
+                        <div class="progress-fill h-full rounded-full bg-gradient-to-r from-blue-700 to-indigo-600 transition-all duration-1000" style="--target-width: 95%"></div>
+                    </div>
+                </div>
+
+                <!-- JavaScript & React -->
+                <div class="skill-item bg-slate-50/70 p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-slate-800 text-sm flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-amber-500"></span> JavaScript & React JS / Vite
+                        </span>
+                        <span class="font-bold text-amber-700 text-xs px-2.5 py-0.5 bg-amber-100/70 rounded-full">85%</span>
+                    </div>
+                    <div class="progress-bar w-full bg-slate-200/80 h-2.5 rounded-full overflow-hidden">
+                        <div class="progress-fill h-full rounded-full bg-gradient-to-r from-amber-500 to-yellow-400 transition-all duration-1000" style="--target-width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- PHP & Laravel -->
+                <div class="skill-item bg-slate-50/70 p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-slate-800 text-sm flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-rose-600"></span> PHP & Laravel 11 / FilamentPHP
+                        </span>
+                        <span class="font-bold text-rose-700 text-xs px-2.5 py-0.5 bg-rose-100/70 rounded-full">90%</span>
+                    </div>
+                    <div class="progress-bar w-full bg-slate-200/80 h-2.5 rounded-full overflow-hidden">
+                        <div class="progress-fill h-full rounded-full bg-gradient-to-r from-rose-600 to-pink-500 transition-all duration-1000" style="--target-width: 90%"></div>
+                    </div>
+                </div>
+
+                <!-- Firebase & Supabase -->
+                <div class="skill-item bg-slate-50/70 p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-slate-800 text-sm flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-600"></span> Supabase (PostgreSQL) & Firebase
+                        </span>
+                        <span class="font-bold text-emerald-700 text-xs px-2.5 py-0.5 bg-emerald-100/70 rounded-full">85%</span>
+                    </div>
+                    <div class="progress-bar w-full bg-slate-200/80 h-2.5 rounded-full overflow-hidden">
+                        <div class="progress-fill h-full rounded-full bg-gradient-to-r from-emerald-600 to-teal-400 transition-all duration-1000" style="--target-width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- System Analysis & Figma -->
+                <div class="skill-item bg-slate-50/70 p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-slate-800 text-sm flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-indigo-600"></span> System Analysis, IPO & UI/UX Figma
+                        </span>
+                        <span class="font-bold text-indigo-700 text-xs px-2.5 py-0.5 bg-indigo-100/70 rounded-full">90%</span>
+                    </div>
+                    <div class="progress-bar w-full bg-slate-200/80 h-2.5 rounded-full overflow-hidden">
+                        <div class="progress-fill h-full rounded-full bg-gradient-to-r from-indigo-600 to-purple-500 transition-all duration-1000" style="--target-width: 90%"></div>
+                    </div>
+                </div>
+
+                <!-- Networking & Infrastructure -->
+                <div class="skill-item bg-slate-50/70 p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-slate-800 text-sm flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-cyan-600"></span> Computer Networking & Fiber Optic (BNSP)
+                        </span>
+                        <span class="font-bold text-cyan-700 text-xs px-2.5 py-0.5 bg-cyan-100/70 rounded-full">85%</span>
+                    </div>
+                    <div class="progress-bar w-full bg-slate-200/80 h-2.5 rounded-full overflow-hidden">
+                        <div class="progress-fill h-full rounded-full bg-gradient-to-r from-cyan-600 to-blue-500 transition-all duration-1000" style="--target-width: 85%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Service Section -->
+    <section id="service" class="py-24 bg-slate-50 relative overflow-hidden">
+        <div class="section-title reveal text-center mb-14">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">My <span class="text-blue-800">Services</span></h2>
+            <p class="text-slate-500 mt-2 max-w-xl mx-auto text-sm sm:text-base">Comprehensive digital solutions ranging from full-stack web development to systems analysis and cloud infrastructure.</p>
+        </div>
+        <div class="container max-w-6xl mx-auto px-6">
+            <div class="service-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Service 1 -->
+                <div class="service-card reveal reveal-delay-1 bg-white p-7 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-blue-200 transition-all duration-300 flex flex-col group">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-700 to-indigo-600 text-white flex items-center justify-center mb-6 shadow-md shadow-blue-500/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-900 mb-3 group-hover:text-blue-800 transition-colors">
+                        Teaching & Workshop Speaker</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-600 flex-grow">
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 font-bold mt-0.5">•</span>
+                            <span>Asisten Dosen Universitas Trilogi, menyampaikan materi Praktikum Sistem Jaringan Komputer untuk 42+ mahasiswa.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 font-bold mt-0.5">•</span>
+                            <span>Pemateri workshop mingguan developer: <em>"Intro to GitHub & Bash Shell on Linux"</em> dan pemrograman Android.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 font-bold mt-0.5">•</span>
+                            <span>Bimbingan teknis intensif, evaluasi progres belajar, dan review kode mahasiswa secara berkelanjutan.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card reveal reveal-delay-2 bg-white p-7 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-blue-200 transition-all duration-300 flex flex-col group">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-700 to-indigo-600 text-white flex items-center justify-center mb-6 shadow-md shadow-blue-500/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-900 mb-3 group-hover:text-blue-800 transition-colors">
+                        Full-Stack Web Development</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-600 flex-grow">
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 font-bold mt-0.5">•</span>
+                            <span>Membangun aplikasi web kustom berbasis Laravel 11, React JS, Supabase, and Tailwind CSS.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 font-bold mt-0.5">•</span>
+                            <span>Pengalaman nyata mendevelop sistem instansi pemerintah: SISMOKAP (Kemenkeu), Paldam Jaya, & Kumdam XVII.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 font-bold mt-0.5">•</span>
+                            <span>Integrasi RESTful API, Payment Gateway (Xendit), realtime auth, dan responsive management dashboard.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card reveal reveal-delay-3 bg-white p-7 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-blue-200 transition-all duration-300 flex flex-col group">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-700 to-indigo-600 text-white flex items-center justify-center mb-6 shadow-md shadow-blue-500/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                            <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                            <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                            <line x1="12" y1="20" x2="12.01" y2="20" />
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-900 mb-3 group-hover:text-blue-800 transition-colors">
+                        Networking & Infrastructure</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-600 flex-grow">
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 font-bold mt-0.5">•</span>
+                            <span>Latar belakang pendidikan Teknik Komputer & Jaringan dan sertifikasi BNSP Computer Networking.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 font-bold mt-0.5">•</span>
+                            <span>Pengalaman praktis splicing & instalasi kabel Fiber Optic tersertifikasi oleh Telkom Indonesia.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 font-bold mt-0.5">•</span>
+                            <span>Brand Ambassador pengenalan kurikulum jaringan fiber optic industri di SMK.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card reveal reveal-delay-1 bg-white p-7 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-blue-200 transition-all duration-300 flex flex-col group">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-700 to-indigo-600 text-white flex items-center justify-center mb-6 shadow-md shadow-blue-500/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3" />
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-900 mb-3 group-hover:text-blue-800 transition-colors">
+                        System Analysis & Database Design</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-600 flex-grow">
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 font-bold mt-0.5">•</span>
+                            <span>Memetakan alur Input, Process, Output (IPO) dan Business Process Workflow via Draw.io.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 font-bold mt-0.5">•</span>
+                            <span>Perancangan ERD, skema relasional (PostgreSQL, MySQL), stored procedures, dan database triggers.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 font-bold mt-0.5">•</span>
+                            <span>Menganalisis kebutuhan fungsional sistem monitoring kinerja anggaran dan notifikasi pengguna.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card reveal reveal-delay-2 bg-white p-7 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-blue-200 transition-all duration-300 flex flex-col group">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-700 to-indigo-600 text-white flex items-center justify-center mb-6 shadow-md shadow-blue-500/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                            <line x1="3" y1="9" x2="21" y2="9" />
+                            <line x1="9" y1="21" x2="9" y2="9" />
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-900 mb-3 group-hover:text-blue-800 transition-colors">
+                        UI/UX & Prototyping Design</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-600 flex-grow">
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 font-bold mt-0.5">•</span>
+                            <span>Merancang user experience yang intuitif & user interface interaktif menggunakan Figma & Miro.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 font-bold mt-0.5">•</span>
+                            <span>High-fidelity wireframe dan interactive prototype sebelum implementasi kode frontend.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 font-bold mt-0.5">•</span>
+                            <span>Pembuatan design system terstruktur, visual asset digital, dan komponen responsif modern.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card reveal reveal-delay-3 bg-white p-7 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-blue-200 transition-all duration-300 flex flex-col group">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-700 to-indigo-600 text-white flex items-center justify-center mb-6 shadow-md shadow-blue-500/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                            <polyline points="10 9 9 9 8 9" />
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-lg text-slate-900 mb-3 group-hover:text-blue-800 transition-colors">
+                        Enterprise IT & Technical Support</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-600 flex-grow">
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 font-bold mt-0.5">•</span>
+                            <span>Sertifikasi BNSP Microsoft Office Advanced & Computer Networking.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 font-bold mt-0.5">•</span>
+                            <span>Maintenance workstation operasional, sistem jaringan cabang, dan hardware troubleshooting.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-blue-600 font-bold mt-0.5">•</span>
+                            <span>Finalis kompetisi pengembangan inovasi teknologi berskala nasional Hackfest 2024.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Section -->
+    <section id="certification" class="py-24 bg-white relative">
+        <div class="section-title reveal text-center mb-12">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">My <span class="text-blue-800">Certification</span></h2>
+            <p class="text-slate-500 mt-2 max-w-xl mx-auto text-sm sm:text-base">Verified professional credentials in Artificial Intelligence, Web Development, BNSP National Competency, and Networking.</p>
+        </div>
+        <div class="container max-w-6xl mx-auto px-6">
+            <div class="filter-buttons reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai">AI & Data</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="bnsp">BNSP Certified</button>
+                <button class="filter-btn" data-filter="networking">Networking</button>
+                <button class="filter-btn" data-filter="community">Community & Workshop</button>
+            </div>
+            <div class="cert-grid">
+                <!-- 1. Build an AI Agent -->
+                <div class="cert-item reveal reveal-delay-1" data-category="ai">
+                    <div class="cert-media">
+                        <img src="images/sertifikat/build-an-ai-agent.jpg" alt="Build an AI Agent" onerror="this.classList.add('img-fallback')">
+                        <span class="cert-tag">IBM</span>
+                    </div>
+                    <div class="cert-content">
+                        <h4>Build an AI Agent</h4>
+                        <p class="cert-issuer">IBM SkillsBuild & watsonx.ai</p>
+                        <p class="cert-desc">Kredensial spesialisasi pembuatan dan pelatihan agen AI cerdas berbasis IBM watsonx.ai dan retrieval-augmented generation (RAG).</p>
+                    </div>
+                </div>
+
+                <!-- 2. AI Foundations -->
+                <div class="cert-item reveal reveal-delay-2" data-category="ai">
+                    <div class="cert-media">
+                        <img src="images/sertifikat/ai-foundations.jpg" alt="AI Foundations" onerror="this.classList.add('img-fallback')">
+                        <span class="cert-tag">IBM</span>
+                    </div>
+                    <div class="cert-content">
+                        <h4>AI Foundations</h4>
+                        <p class="cert-issuer">IBM SkillsBuild</p>
+                        <p class="cert-desc">Sertifikasi pemahaman fundamental Artificial Intelligence, machine learning algorithms, NLP, dan etika implementasi AI.</p>
+                    </div>
+                </div>
+
+                <!-- 3. IBM Granite -->
+                <div class="cert-item reveal reveal-delay-3" data-category="ai">
+                    <div class="cert-media">
+                        <img src="images/sertifikat/data-classification-ibm-granite.jpg" alt="Data Classification and Summarization Using IBM Granite" onerror="this.classList.add('img-fallback')">
+                        <span class="cert-tag">IBM Granite</span>
+                    </div>
+                    <div class="cert-content">
+                        <h4>Data Classification & Summarization</h4>
+                        <p class="cert-issuer">IBM</p>
+                        <p class="cert-desc">Penguasaan implementasi foundation model IBM Granite untuk otomatisasi klasifikasi data skala besar dan perangkuman teks cerdas.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Web Development Fundamentals -->
+                <div class="cert-item reveal reveal-delay-1" data-category="web">
+                    <div class="cert-media">
+                        <img src="images/sertifikat/web-development-fundamentals.jpg" alt="Web Development Fundamentals" onerror="this.classList.add('img-fallback')">
+                        <span class="cert-tag">Web Dev</span>
+                    </div>
+                    <div class="cert-content">
+                        <h4>Web Development Fundamentals</h4>
+                        <p class="cert-issuer">IBM SkillsBuild</p>
+                        <p class="cert-desc">Fondasi arsitektur web modern, integrasi responsive layout dengan HTML5, CSS3, DOM scripting JavaScript, dan RESTful web.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Practical Office Advanced (BNSP) -->
+                <div class="cert-item reveal reveal-delay-2" data-category="bnsp">
+                    <div class="cert-media">
+                        <img src="images/sertifikat/practical-office-advanced.jpg" alt="Practical Office Advanced BNSP" onerror="this.classList.add('img-fallback')">
+                        <span class="cert-tag">BNSP</span>
+                    </div>
+                    <div class="cert-content">
+                        <h4>Practical Office Advanced</h4>
+                        <p class="cert-issuer">Badan Nasional Sertifikasi Profesi (BNSP)</p>
+                        <p class="cert-desc">Sertifikasi kompetensi nasional tingkat mahir dalam otomasi dokumen, analisis data spreadsheet kompleks, dan produktivitas digital.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Computer Networking (BNSP) -->
+                <div class="cert-item reveal reveal-delay-3" data-category="bnsp networking">
+                    <div class="cert-media">
+                        <img src="images/sertifikat/computer-networking-bnsp.jpg" alt="Computer Networking BNSP" onerror="this.classList.add('img-fallback')">
+                        <span class="cert-tag">BNSP</span>
+                    </div>
+                    <div class="cert-content">
+                        <h4>Computer Networking</h4>
+                        <p class="cert-issuer">Badan Nasional Sertifikasi Profesi (BNSP)</p>
+                        <p class="cert-desc">Sertifikasi keahlian teknisi jaringan komputer nasional: konfigurasi routing, switching, sub-networking, dan troubleshooting LAN/WAN.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Fiber Optic Training -->
+                <div class="cert-item reveal reveal-delay-1" data-category="networking">
+                    <div class="cert-media">
+                        <img src="images/sertifikat/telkom-fiber-optic.jpg" alt="Pelatihan Fiber Optic Telkom" onerror="this.classList.add('img-fallback')">
+                        <span class="cert-tag">Telkom</span>
+                    </div>
+                    <div class="cert-content">
+                        <h4>Fiber Optic Installation & Network</h4>
+                        <p class="cert-issuer">Telkom Indonesia</p>
+                        <p class="cert-desc">Pelatihan profesional teknik instalasi, penyambungan splicing kabel fiber optic, dan pengujian redaman link optik.</p>
+                    </div>
+                </div>
+
+                <!-- 8. GDSC Workshop Facilitator -->
+                <div class="cert-item reveal reveal-delay-2" data-category="community">
+                    <div class="cert-media">
+                        <img src="images/sertifikat/gdsc.jpg" alt="GDSC Techbuburit Moderator & Speaker">
+                        <span class="cert-tag">GDSC</span>
+                    </div>
+                    <div class="cert-content">
+                        <h4>GDSC Techbuburit Moderator</h4>
+                        <p class="cert-issuer">Google Developer Student Clubs</p>
+                        <p class="cert-desc">Certificate of Appreciation sebagai moderator dan fasilitator workshop teknologi komunitas developer mahasiswa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="project" class="py-24 bg-slate-50 relative">
+        <div class="section-title reveal text-center mb-12">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Featured <span class="text-blue-800">Projects</span></h2>
+            <p class="text-slate-500 mt-2 max-w-xl mx-auto text-sm sm:text-base">Web applications, enterprise information systems, and technical software engineering projects.</p>
+        </div>
+        <div class="container max-w-6xl mx-auto px-6">
+            <div class="filter-buttons reveal">
+                <button class="filter-btn-project active" data-filter="all">All Projects</button>
+                <button class="filter-btn-project" data-filter="web">Web Application</button>
+                <button class="filter-btn-project" data-filter="desktop">Desktop App</button>
+                <button class="filter-btn-project" data-filter="database">Database & Systems</button>
+            </div>
+            <div class="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- 1. SISMOKAP -->
+                <div class="project-card reveal reveal-delay-1 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden group" data-category="web">
+                    <div class="h-48 bg-gradient-to-br from-blue-900 via-indigo-900 to-slate-900 p-6 flex flex-col justify-between relative overflow-hidden">
+                        <div class="flex justify-between items-center relative z-10">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-blue-200 backdrop-blur-md border border-white/10">Kemenkeu RI</span>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="w-10 h-10 rounded-xl bg-blue-600/60 flex items-center justify-center text-white mb-2 shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                            </div>
+                            <h3 class="text-white font-bold text-lg leading-tight group-hover:text-blue-300 transition-colors">SISMOKAP DJKN</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
+                            Sistem Monitoring & Evaluasi Kinerja Anggaran unit PSM DJKN Kemenkeu RI. Arsitektur multi-tier role, interaktif chart dengan ApexCharts, dan integrasi Supabase PostgreSQL REST API.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span class="px-2.5 py-0.5 bg-blue-50 text-blue-700 rounded-md text-xs font-semibold">Laravel 11</span>
+                            <span class="px-2.5 py-0.5 bg-indigo-50 text-indigo-700 rounded-md text-xs font-semibold">Supabase</span>
+                            <span class="px-2.5 py-0.5 bg-cyan-50 text-cyan-700 rounded-md text-xs font-semibold">Tailwind CSS</span>
+                            <span class="px-2.5 py-0.5 bg-slate-100 text-slate-700 rounded-md text-xs font-semibold">ApexCharts</span>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-600">Instansi Pemerintah</span>
+                            <a href="#about" class="text-xs font-bold text-blue-700 hover:text-blue-900 flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+                                Detail Overview →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Paldam Jaya -->
+                <div class="project-card reveal reveal-delay-2 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden group" data-category="web">
+                    <div class="h-48 bg-gradient-to-br from-emerald-950 via-slate-900 to-teal-950 p-6 flex flex-col justify-between relative overflow-hidden">
+                        <div class="flex justify-between items-center relative z-10">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-emerald-200 backdrop-blur-md border border-white/10">Kodam Jaya TNI-AD</span>
+                            <span class="text-xs font-semibold text-emerald-300 bg-emerald-900/60 px-2.5 py-0.5 rounded-full border border-emerald-500/30">Enterprise</span>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-600/60 flex items-center justify-center text-white mb-2 shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                            </div>
+                            <h3 class="text-white font-bold text-lg leading-tight group-hover:text-emerald-300 transition-colors">Pengarsipan Surat Paldam Jaya</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
+                            Platform digital persuratan & kearsipan militer Kodam Jaya TNI-AD. Dilengkapi pencarian berkas instan, role-based access, export otomatis data ke Excel/PDF, dan audit trail log.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span class="px-2.5 py-0.5 bg-red-50 text-red-700 rounded-md text-xs font-semibold">Laravel</span>
+                            <span class="px-2.5 py-0.5 bg-sky-50 text-sky-700 rounded-md text-xs font-semibold">React JS</span>
+                            <span class="px-2.5 py-0.5 bg-cyan-50 text-cyan-700 rounded-md text-xs font-semibold">Tailwind CSS</span>
+                            <span class="px-2.5 py-0.5 bg-amber-50 text-amber-700 rounded-md text-xs font-semibold">MySQL</span>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-600">Kearsipan Militer</span>
+                            <a href="#about" class="text-xs font-bold text-blue-700 hover:text-blue-900 flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+                                Detail Overview →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Kumdam XVII Cendrawasih -->
+                <div class="project-card reveal reveal-delay-3 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden group" data-category="web">
+                    <div class="h-48 bg-gradient-to-br from-slate-900 via-indigo-950 to-blue-950 p-6 flex flex-col justify-between relative overflow-hidden">
+                        <div class="flex justify-between items-center relative z-10">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-indigo-200 backdrop-blur-md border border-white/10">Kodam XVII TNI-AD</span>
+                            <span class="text-xs font-semibold text-blue-300 bg-blue-900/60 px-2.5 py-0.5 rounded-full border border-blue-500/30">Legal System</span>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-600/60 flex items-center justify-center text-white mb-2 shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+                            </div>
+                            <h3 class="text-white font-bold text-lg leading-tight group-hover:text-indigo-300 transition-colors">Sistem Perkara Kumdam XVII</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
+                            Sistem penelusuran status perkara hukum dan peradilan militer Kodam XVII Cendrawasih. Sinkronisasi dokumen kasus secara realtime dan manajemen tahapan persidangan.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span class="px-2.5 py-0.5 bg-sky-50 text-sky-700 rounded-md text-xs font-semibold">React JS</span>
+                            <span class="px-2.5 py-0.5 bg-purple-50 text-purple-700 rounded-md text-xs font-semibold">Vite</span>
+                            <span class="px-2.5 py-0.5 bg-amber-50 text-amber-700 rounded-md text-xs font-semibold">Firebase</span>
+                            <span class="px-2.5 py-0.5 bg-cyan-50 text-cyan-700 rounded-md text-xs font-semibold">Tailwind CSS</span>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-600">Peradilan Militer</span>
+                            <a href="#about" class="text-xs font-bold text-blue-700 hover:text-blue-900 flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+                                Detail Overview →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Maria Salon Platform -->
+                <div class="project-card reveal reveal-delay-1 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden group" data-category="web">
+                    <div class="h-48 bg-gradient-to-br from-rose-950 via-slate-900 to-pink-950 p-6 flex flex-col justify-between relative overflow-hidden">
+                        <div class="flex justify-between items-center relative z-10">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-rose-200 backdrop-blur-md border border-white/10">Commercial Web</span>
+                            <span class="text-xs font-semibold text-rose-300 bg-rose-900/60 px-2.5 py-0.5 rounded-full border border-rose-500/30">Payment Gateway</span>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="w-10 h-10 rounded-xl bg-rose-600/60 flex items-center justify-center text-white mb-2 shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            </div>
+                            <h3 class="text-white font-bold text-lg leading-tight group-hover:text-rose-300 transition-colors">Maria Salon Booking Platform</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
+                            Platform web reservasi salon kecantikan online dengan pemilihan layanan dinamis, kalender jadwal terintegrasi, dan pembayaran otomatis melalui Payment Gateway Xendit API.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span class="px-2.5 py-0.5 bg-sky-50 text-sky-700 rounded-md text-xs font-semibold">React JS</span>
+                            <span class="px-2.5 py-0.5 bg-cyan-50 text-cyan-700 rounded-md text-xs font-semibold">Tailwind CSS</span>
+                            <span class="px-2.5 py-0.5 bg-emerald-50 text-emerald-700 rounded-md text-xs font-semibold">Node.js</span>
+                            <span class="px-2.5 py-0.5 bg-indigo-50 text-indigo-700 rounded-md text-xs font-semibold">Xendit API</span>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-600">E-Commerce & Booking</span>
+                            <a href="#about" class="text-xs font-bold text-blue-700 hover:text-blue-900 flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+                                Detail Overview →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Insanova KMS -->
+                <div class="project-card reveal reveal-delay-2 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden group" data-category="web">
+                    <div class="h-48 bg-gradient-to-br from-violet-950 via-slate-900 to-indigo-950 p-6 flex flex-col justify-between relative overflow-hidden">
+                        <div class="flex justify-between items-center relative z-10">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-violet-200 backdrop-blur-md border border-white/10">Knowledge Base</span>
+                            <span class="text-xs font-semibold text-violet-300 bg-violet-900/60 px-2.5 py-0.5 rounded-full border border-violet-500/30">UI/UX & Web</span>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="w-10 h-10 rounded-xl bg-violet-600/60 flex items-center justify-center text-white mb-2 shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                            </div>
+                            <h3 class="text-white font-bold text-lg leading-tight group-hover:text-violet-300 transition-colors">Insanova Portal & KMS</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
+                            Platform publikasi digital dan knowledge sharing inovasi dengan alur multi-penulis, layout responsif modern, dan implementasi UI/UX dari Figma ke full-stack web.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span class="px-2.5 py-0.5 bg-red-50 text-red-700 rounded-md text-xs font-semibold">Laravel</span>
+                            <span class="px-2.5 py-0.5 bg-pink-50 text-pink-700 rounded-md text-xs font-semibold">Figma UI/UX</span>
+                            <span class="px-2.5 py-0.5 bg-amber-50 text-amber-700 rounded-md text-xs font-semibold">MySQL</span>
+                            <span class="px-2.5 py-0.5 bg-blue-50 text-blue-700 rounded-md text-xs font-semibold">Bootstrap</span>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-600">Knowledge Portal</span>
+                            <a href="#about" class="text-xs font-bold text-blue-700 hover:text-blue-900 flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+                                Detail Overview →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. PlayMath -->
+                <div class="project-card reveal reveal-delay-3 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden group" data-category="web">
+                    <div class="h-48 bg-gradient-to-br from-amber-950 via-slate-900 to-yellow-950 p-6 flex flex-col justify-between relative overflow-hidden">
+                        <div class="flex justify-between items-center relative z-10">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-amber-200 backdrop-blur-md border border-white/10">EdTech</span>
+                            <span class="text-xs font-semibold text-amber-300 bg-amber-900/60 px-2.5 py-0.5 rounded-full border border-amber-500/30">Interactive</span>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="w-10 h-10 rounded-xl bg-amber-600/60 flex items-center justify-center text-white mb-2 shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+                            </div>
+                            <h3 class="text-white font-bold text-lg leading-tight group-hover:text-amber-300 transition-colors">PlayMath Interactive Portal</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
+                            Platform web interaktif pembelajaran matematika dasar dengan materi visual menarik, kuis berbatas waktu, dan integrasi backend Firebase realtime.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span class="px-2.5 py-0.5 bg-orange-50 text-orange-700 rounded-md text-xs font-semibold">HTML5</span>
+                            <span class="px-2.5 py-0.5 bg-blue-50 text-blue-700 rounded-md text-xs font-semibold">CSS3</span>
+                            <span class="px-2.5 py-0.5 bg-yellow-50 text-yellow-800 rounded-md text-xs font-semibold">JavaScript</span>
+                            <span class="px-2.5 py-0.5 bg-amber-50 text-amber-700 rounded-md text-xs font-semibold">Firebase</span>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <a href="https://playmath-a3b62.web.app/" target="_blank" class="text-xs font-bold text-blue-700 hover:text-blue-900 flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+                                Live Website ↗
+                            </a>
+                            <a href="https://github.com/zhubalabala23" target="_blank" class="text-xs font-semibold text-slate-500 hover:text-slate-900">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Warehouse Recording Desktop App -->
+                <div class="project-card reveal reveal-delay-1 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden group" data-category="desktop">
+                    <div class="h-48 bg-gradient-to-br from-cyan-950 via-slate-900 to-blue-950 p-6 flex flex-col justify-between relative overflow-hidden">
+                        <div class="flex justify-between items-center relative z-10">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-cyan-200 backdrop-blur-md border border-white/10">Desktop Software</span>
+                            <span class="text-xs font-semibold text-cyan-300 bg-cyan-900/60 px-2.5 py-0.5 rounded-full border border-cyan-500/30">Python GUI</span>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="w-10 h-10 rounded-xl bg-cyan-600/60 flex items-center justify-center text-white mb-2 shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+                            </div>
+                            <h3 class="text-white font-bold text-lg leading-tight group-hover:text-cyan-300 transition-colors">Warehouse Inventory Program</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
+                            Aplikasi desktop pencatatan pergudangan dengan operasi CRUD lengkap, pelacakan stok barang masuk-keluar, dan database relasional terintegrasi.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span class="px-2.5 py-0.5 bg-cyan-50 text-cyan-700 rounded-md text-xs font-semibold">Python GUI</span>
+                            <span class="px-2.5 py-0.5 bg-blue-50 text-blue-700 rounded-md text-xs font-semibold">Tkinter</span>
+                            <span class="px-2.5 py-0.5 bg-amber-50 text-amber-700 rounded-md text-xs font-semibold">MySQL</span>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-600">Inventory System</span>
+                            <a href="https://github.com/zhubalabala23" target="_blank" class="text-xs font-bold text-blue-700 hover:text-blue-900 flex items-center gap-1">
+                                GitHub Repo ↗
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Database Toko Padi Jaya (BNSP) -->
+                <div class="project-card reveal reveal-delay-2 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden group" data-category="database">
+                    <div class="h-48 bg-gradient-to-br from-slate-900 via-zinc-900 to-slate-950 p-6 flex flex-col justify-between relative overflow-hidden">
+                        <div class="flex justify-between items-center relative z-10">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-slate-200 backdrop-blur-md border border-white/10">BNSP Certified</span>
+                            <span class="text-xs font-semibold text-emerald-300 bg-emerald-900/60 px-2.5 py-0.5 rounded-full border border-emerald-500/30">Database SQL</span>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="w-10 h-10 rounded-xl bg-slate-700/60 flex items-center justify-center text-white mb-2 shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                            </div>
+                            <h3 class="text-white font-bold text-lg leading-tight group-hover:text-blue-300 transition-colors">Database Toko Padi Jaya</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
+                            Perancangan skema relasional, normalisasi hingga 3NF, stored procedure, triggers audit, dan kalkulasi otomatis pajak penjualan untuk sertifikasi BNSP.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span class="px-2.5 py-0.5 bg-orange-50 text-orange-700 rounded-md text-xs font-semibold">Java</span>
+                            <span class="px-2.5 py-0.5 bg-amber-50 text-amber-700 rounded-md text-xs font-semibold">MySQL</span>
+                            <span class="px-2.5 py-0.5 bg-slate-100 text-slate-700 rounded-md text-xs font-semibold">XAMPP</span>
+                            <span class="px-2.5 py-0.5 bg-blue-50 text-blue-700 rounded-md text-xs font-semibold">BNSP Ujikom</span>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-600">Database Modeling</span>
+                            <a href="https://github.com/zhubalabala23" target="_blank" class="text-xs font-bold text-blue-700 hover:text-blue-900 flex items-center gap-1">
+                                View Schema ↗
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. System Modeling & UML -->
+                <div class="project-card reveal reveal-delay-3 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden group" data-category="database">
+                    <div class="h-48 bg-gradient-to-br from-blue-950 via-slate-900 to-indigo-950 p-6 flex flex-col justify-between relative overflow-hidden">
+                        <div class="flex justify-between items-center relative z-10">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-blue-200 backdrop-blur-md border border-white/10">Architecture</span>
+                            <span class="text-xs font-semibold text-blue-300 bg-blue-900/60 px-2.5 py-0.5 rounded-full border border-blue-500/30">System Modeling</span>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="w-10 h-10 rounded-xl bg-blue-600/60 flex items-center justify-center text-white mb-2 shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" y1="9" x2="6" y2="21"/></svg>
+                            </div>
+                            <h3 class="text-white font-bold text-lg leading-tight group-hover:text-blue-300 transition-colors">IPO & System Architecture Modeling</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
+                            Dokumentasi visual arsitektur sistem enterprise mencakup Use Case Diagram, Activity Diagram, Sequence Diagram, and IPO Flowchart menggunakan Draw.io.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span class="px-2.5 py-0.5 bg-indigo-50 text-indigo-700 rounded-md text-xs font-semibold">UML</span>
+                            <span class="px-2.5 py-0.5 bg-blue-50 text-blue-700 rounded-md text-xs font-semibold">Draw.io</span>
+                            <span class="px-2.5 py-0.5 bg-slate-100 text-slate-700 rounded-md text-xs font-semibold">IPO Model</span>
+                            <span class="px-2.5 py-0.5 bg-emerald-50 text-emerald-700 rounded-md text-xs font-semibold">BPMN</span>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-600">Enterprise Analysis</span>
+                            <a href="#service" class="text-xs font-bold text-blue-700 hover:text-blue-900 flex items-center gap-1">
+                                Overview ↗
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Activity Section -->
+    <section id="activity" class="py-24 bg-white relative">
+        <div class="section-title reveal text-center mb-12">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">My <span class="text-blue-800">Activities</span></h2>
+            <p class="text-slate-500 mt-2 max-w-xl mx-auto text-sm sm:text-base">Workshops, teaching assistance, developer communities, and industry milestones.</p>
+        </div>
+        <div class="container max-w-6xl mx-auto px-6">
+            <div class="filter-buttons reveal">
+                <button class="filter-btn-activity active" data-filter="all">All</button>
+                <button class="filter-btn-activity" data-filter="workshop">Workshops & Talks</button>
+                <button class="filter-btn-activity" data-filter="teaching">Teaching Assistant</button>
+                <button class="filter-btn-activity" data-filter="community">Community & Leadership</button>
+                <button class="filter-btn-activity" data-filter="industry">Industry & Projects</button>
+            </div>
+            <div class="activity-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- 1. GDSC Speaker -->
+                <div class="activity-item reveal reveal-delay-1 relative rounded-2xl overflow-hidden shadow-md group cursor-pointer h-72" data-category="workshop community">
+                    <img src="images/sertifikat/gdsc.jpg" alt="GDSC Techbuburit Moderator & Speaker" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="activity-overlay absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent p-6 flex flex-col justify-end text-white">
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-500/80 text-white w-max mb-2">Workshop Speaker</span>
+                        <h4 class="font-bold text-lg leading-snug text-white group-hover:text-blue-300 transition-colors">GDSC Techbuburit Moderator & Speaker</h4>
+                        <p class="text-xs text-slate-300 mt-1">Google Developer Student Clubs - Facilitator</p>
+                    </div>
+                </div>
+
+                <!-- 2. GDSC Community Organizer -->
+                <div class="activity-item reveal reveal-delay-2 relative rounded-2xl overflow-hidden shadow-md group cursor-pointer h-72" data-category="community">
+                    <img src="images/aktifitas/_CORET~1.JPG" alt="GDSC Community" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="activity-overlay absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent p-6 flex flex-col justify-end text-white">
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-indigo-500/80 text-white w-max mb-2">Community Leadership</span>
+                        <h4 class="font-bold text-lg leading-snug text-white group-hover:text-indigo-300 transition-colors">GDSC Universitas Trilogi</h4>
+                        <p class="text-xs text-slate-300 mt-1">Co-Lead & Community Development Team</p>
+                    </div>
+                </div>
+
+                <!-- 3. Asisten Dosen Praktikum -->
+                <div class="activity-item reveal reveal-delay-3 relative rounded-2xl overflow-hidden shadow-md group cursor-pointer h-72 bg-gradient-to-br from-blue-900 to-indigo-950 p-6 flex flex-col justify-end text-white" data-category="teaching">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    </div>
+                    <div class="relative z-10">
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-cyan-500/80 text-white w-max mb-2 inline-block">Teaching</span>
+                        <h4 class="font-bold text-lg leading-snug text-white">Praktikum Jaringan Komputer</h4>
+                        <p class="text-xs text-slate-300 mt-1">Asisten Dosen - Mengajar 42+ Mahasiswa S1 Informatika</p>
+                    </div>
+                </div>
+
+                <!-- 4. DJKN Project Experience -->
+                <div class="activity-item reveal reveal-delay-1 relative rounded-2xl overflow-hidden shadow-md group cursor-pointer h-72" data-category="industry">
+                    <img src="images/djkn.jpg" alt="DJKN Kemenkeu RI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="activity-overlay absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent p-6 flex flex-col justify-end text-white">
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-500/80 text-white w-max mb-2">Government Project</span>
+                        <h4 class="font-bold text-lg leading-snug text-white group-hover:text-emerald-300 transition-colors">Junior System Analyst & Web Dev</h4>
+                        <p class="text-xs text-slate-300 mt-1">DJKN Kementerian Keuangan Republik Indonesia</p>
+                    </div>
+                </div>
+
+                <!-- 5. Academic Degree -->
+                <div class="activity-item reveal reveal-delay-2 relative rounded-2xl overflow-hidden shadow-md group cursor-pointer h-72 bg-gradient-to-br from-slate-900 to-blue-950 p-6 flex flex-col justify-end text-white" data-category="industry">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-15">
+                        <img src="images/trilogi.png" alt="Universitas Trilogi" class="w-32 h-32 object-contain filter invert">
+                    </div>
+                    <div class="relative z-10">
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-500/80 text-white w-max mb-2 inline-block">Academic Milestone</span>
+                        <h4 class="font-bold text-lg leading-snug text-white">S1 Informatika - IPK 3.82 / 4.00</h4>
+                        <p class="text-xs text-slate-300 mt-1">Universitas Trilogi - Bidang Minat Rekayasa Perangkat Lunak</p>
+                    </div>
+                </div>
+
+                <!-- 6. Telkom Fiber Optic Training -->
+                <div class="activity-item reveal reveal-delay-3 relative rounded-2xl overflow-hidden shadow-md group cursor-pointer h-72 bg-gradient-to-br from-red-950 via-slate-900 to-slate-950 p-6 flex flex-col justify-end text-white" data-category="workshop industry">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/></svg>
+                    </div>
+                    <div class="relative z-10">
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-rose-500/80 text-white w-max mb-2 inline-block">Technical Workshop</span>
+                        <h4 class="font-bold text-lg leading-snug text-white">Fiber Optic Specialist & Ambassador</h4>
+                        <p class="text-xs text-slate-300 mt-1">Pelatihan Bersertifikat Telkom Indonesia & SMK YP IPPI</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section py-24 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white relative overflow-hidden" id="contact">
+        <!-- Glow circles in background -->
+        <div class="hero-glow-ring left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"></div>
+        <div class="container max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
+            <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-500/20 text-blue-300 border border-blue-400/30 mb-6 backdrop-blur-md">
+                Get In Touch
+            </span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
+                Ready to collaborate on your next big project?
+            </h2>
+            <p class="text-slate-300 max-w-xl mx-auto text-base sm:text-lg mb-10 leading-relaxed">
+                Currently open to full-stack Web Development opportunities, government systems, and freelance projects. Let's create something extraordinary together.
+            </p>
+            <div class="contact-buttons flex flex-wrap justify-center items-center gap-4">
+                <a href="mailto:raka230803@gmail.com" class="contact-btn px-8 py-3.5 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold flex items-center gap-2.5 shadow-xl shadow-blue-600/30 transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <span>raka230803@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/tubagusraka/" target="_blank" class="contact-btn px-7 py-3.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold flex items-center gap-2.5 backdrop-blur-md transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/zhubalabala23" target="_blank" class="contact-btn px-7 py-3.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold flex items-center gap-2.5 backdrop-blur-md transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-slate-950 text-slate-400 text-center text-sm border-t border-slate-800/80">
+        <div class="container max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>© 2026 Tubagus Raka Satria Putra. All rights reserved.</p>
+            <div class="flex items-center gap-6">
+                <a href="#home" class="hover:text-white transition-colors">Back to top ↑</a>
+                <a href="https://www.linkedin.com/in/tubagusraka/" target="_blank" class="hover:text-white transition-colors">LinkedIn</a>
+                <a href="https://github.com/zhubalabala23" target="_blank" class="hover:text-white transition-colors">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
